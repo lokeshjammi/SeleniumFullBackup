@@ -1,0 +1,22 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.ss.usermodel.Workbook;
+
+public class DataDrivenTestExample {
+
+	public void readExcelFile(String filePath, String fileName, String sheetName) throws FileNotFoundException {
+		FileInputStream fielInputStream = new FileInputStream(filePath + "\\" + fileName);
+		Workbook workbook;
+		if(fileName.contains(".xlsx")) {
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		
+	}
+
+}

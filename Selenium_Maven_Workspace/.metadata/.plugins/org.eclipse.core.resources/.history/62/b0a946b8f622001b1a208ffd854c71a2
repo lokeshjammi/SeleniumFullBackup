@@ -1,0 +1,27 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class DataDrivenTestExample {
+
+	public void readExcelFile(String filePath, String fileName, String sheetName) throws IOException {
+		FileInputStream fileInputStream = new FileInputStream(filePath + "\\" + fileName);
+		Workbook workbook;
+		String fileNameExtension = fileName.substring(fileName.indexOf("."));
+		if (fileNameExtension.equals(".xlsx")) {
+			workbook = new XSSFWorkbook(fileInputStream);
+		} else if(fileNameExtension.equals(".xls")) {
+			workbook = new HSSFWorkbook(fileInputStream);
+		}
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

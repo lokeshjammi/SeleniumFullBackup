@@ -1,0 +1,26 @@
+package qamavenpractice.MavenJava;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class DemoExampleTwoTest {
+	@Test
+	public void testThree() {
+		System.out.println("This is third method");
+	}
+	
+	@Test(enabled = false)
+	public void testFour() {
+		System.out.println("This is fourth method");
+	}
+	
+	@BeforeMethod
+	public void beforeEveryMethod() {
+		System.out.println("This method will run before every method runs");
+	}
+	
+	@Test
+	public void disableTest() {
+		System.out.println("This test is disabled");
+	}
+}

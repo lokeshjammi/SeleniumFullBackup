@@ -1,0 +1,33 @@
+package com.demo.project;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BrokenURLCheckExample {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.amazon.in/";
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	}
+
+	@After
+	public void tearDown() {
+		driver.close();
+	}
+
+	@Test
+	public void test() throws MalformedURLException, IOException {
+		HttpURLConnection conn = (HttpURLConnection) new java.net.URL(URL).openConnection();
+		conn.setRequestMethod("HEAD");
+		conn.connect();
+	}
+}

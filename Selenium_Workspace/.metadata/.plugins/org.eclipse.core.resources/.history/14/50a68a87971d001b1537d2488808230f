@@ -1,0 +1,27 @@
+package com.stream.tutorial;
+
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
+import org.testng.annotations.Test;
+
+public class DemoTest {
+	@Test
+	public void streamFilter() {
+		ArrayList<String> names = new ArrayList<String>();
+		names.add("Abhijjeth");
+		names.add("Abhisheik");
+		names.add("Don");
+		names.add("Jack");
+		names.add("Mary");
+		names.add("Alex");
+
+		Long namesCount = names.stream().filter(s -> s.startsWith("A")).count();
+		System.out.println(namesCount);
+	}
+
+	@Test
+	public void streamCreate() {
+		Stream.of("Abhijjeth", "Abhisheik", "Don", "Jack", "Mary", "Alex").filter(s -> s.startsWith("A")).count();  
+	}
+}

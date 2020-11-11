@@ -1,0 +1,15 @@
+package qamavenpractice.MavenJava;
+
+import org.junit.Test;
+
+public class DemoExampleTwoTest {
+	@Test
+	public void testThree() {
+		System.out.println("This is third method");
+	}
+	
+	@Test
+	public void testFour() {
+		System.out.println("This is fourth method");
+	}
+}

@@ -1,0 +1,15 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.util.ArrayList;
+
+public class DataDrivenTestExample {
+	public ArrayList<String> getData(String testCaseName) {
+
+		return null;
+	}
+
+	public static void main(String[] args) {
+		FileInputStream fileInputStream = new FileInputStream("D://DataDrivenCheck.xlsx");
+	}
+}

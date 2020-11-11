@@ -1,0 +1,46 @@
+package com.demo.project;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class TestNgDemoCheck {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.google.com";
+
+	public void setUp() {
+		System.out.println("This is before method");
+	}
+
+	public void tearDown() {
+		System.out.println("This is after method");
+	}
+
+	@Test
+	public void test() {
+		System.out.println("This is test method");
+	}
+
+	@Test
+	public void mobileLogin() {
+		System.out.println("This is mobile login");
+	}
+
+	@Test
+	public void webLogin() {
+		System.out.println("This is web login");
+	}
+
+	@Test
+	public void desktopLogin() {
+		System.out.println("This is desktop login");
+	}
+
+	@BeforeSuite
+	public void firstMethod() {
+		System.out.println("This will run before the suit");
+	}
+}

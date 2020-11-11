@@ -1,0 +1,27 @@
+package com.demo.project;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+
+public class TestNgRealTime {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.google.com";
+
+	@BeforeTest
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.close();
+	}
+
+	@Test
+	public void test() {
+		
+	}
+}

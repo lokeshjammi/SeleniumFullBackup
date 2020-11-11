@@ -1,0 +1,11 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class DataDrivenTestExcel {
+	public static void main(String[] args) throws FileNotFoundException {
+		FileInputStream pathOfFile = new FileInputStream("D://DataCheck.xls");
+
+	}
+}

@@ -1,0 +1,27 @@
+package com.demo.project;
+
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class StreamDemoExample {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://rahulshettyacademy.com/greenkart/#/offers";
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "Chrome Path");
+	}
+
+	@After
+	public void tearDown() {
+		driver.close();
+	}
+
+	@Test
+	public void test() {
+
+	}
+}

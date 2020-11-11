@@ -1,0 +1,54 @@
+package com.demo.project;
+
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class SecondRound {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.xxxxx.com";
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "Chrome Path");
+	}
+
+	@After
+	public void tearDown() {
+		driver.close();
+	}
+
+	@Test
+	public void test() {
+		driver.get(URL);
+		/*
+		 * driver will have access to all over the web-elements present in web screen
+		 * 
+		 * List contains WebElements with class "css-1hwfws3"
+		 */
+		List<WebElement> commonCodeBlock = driver.findElements(By.xpath("//div[@class='css-bg1rzq-control']"));
+		
+		/*
+		 * scopeIntoSecondBlock has the second block WebElement
+		 */
+		WebElement scopeIntoSecondBlock = commonCodeBlock.get(1);
+		
+		/*
+		 * Xpath of target field
+		 * 
+		 * div tag with class=css-1hwfws3 is the parent in scopeIntoSecondBlock WebElement and it has two child div
+		 * 
+		 * div[2] goes to the second div and it contain single div
+		 * 
+		 * The single div has one input tag
+		 */
+		scopeIntoSecondBlock.findElement(By.xpath("//div[@class='css-1hwfws3']/div[2]/div/input"));
+
+	}
+}

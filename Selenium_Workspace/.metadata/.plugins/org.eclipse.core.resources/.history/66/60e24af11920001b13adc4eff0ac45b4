@@ -1,0 +1,21 @@
+package com.demo.project;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class GlobalValuesDrive {
+
+	public static void main(String[] args) throws IOException {
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(
+				"D:\\Selenium_Workspace\\SeleniumDemoProject\\src\\com\\demo\\project\\data.properties");
+		prop.load(fis);
+		System.out.println(prop.get("browser"));
+		prop.setProperty("browser", "Edge");
+		FileOutputStream fos = new FileOutputStream("D:\\Selenium_Workspace\\SeleniumDemoProject\\src\\com\\demo\\project\\data.properties");
+		prop.store(fos, null);
+	}
+
+}

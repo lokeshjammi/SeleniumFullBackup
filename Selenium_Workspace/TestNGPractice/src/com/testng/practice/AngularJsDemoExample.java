@@ -1,0 +1,31 @@
+package com.testng.practice;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class AngularJsDemoExample {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://angular.io/";
+
+	@BeforeTest
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.close();
+	}
+
+	@Test
+	public void test() throws InterruptedException {
+		driver.get(URL);
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//a[@class='button hero-cta']")).click();
+		Thread.sleep(3000);
+	}
+}

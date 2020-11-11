@@ -1,0 +1,8 @@
+package com.demo.project;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class AcceptCertificationsExample {
+	DesiredCapabilities ch = new DesiredCapabilities().chrome();
+
+}

@@ -1,0 +1,53 @@
+package com.testng.practice;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class TestNgClassExample {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.google.com";
+
+	@BeforeTest
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.out.println("Before test1 method is running");
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.close();
+		System.out.println("After test method is running");
+	}
+
+	@Test
+	public void test() {
+		driver.get(URL);
+		System.out.println("Test Method is running");
+	}
+
+	@Test
+	public void test1() {
+		System.out.println("Test1 Method is running");
+	}
+
+	@BeforeClass
+	public void beforeClassMethod() {
+		System.out.println("Before class method is executing");
+	}
+
+	@AfterClass
+	public void afterClassMethod() {
+		System.out.println("After class method is running");
+	}
+
+	@BeforeMethod
+	public void beforeMethod() {
+		System.out.println("Before method is runnning");
+	}
+}

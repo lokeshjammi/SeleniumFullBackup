@@ -1,0 +1,15 @@
+package com.demo.project;
+
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestNgDemoCheck {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.google.com";
+	
+	@Before
+	public void setUp() {
+		
+	}
+}

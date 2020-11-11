@@ -1,0 +1,21 @@
+package com.demo.project;
+
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ScreenShotDemoCheck {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://www.amazon.in/";
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	}
+
+	@After
+	public void tearDown() {
+		driver.close();
+	}
+}

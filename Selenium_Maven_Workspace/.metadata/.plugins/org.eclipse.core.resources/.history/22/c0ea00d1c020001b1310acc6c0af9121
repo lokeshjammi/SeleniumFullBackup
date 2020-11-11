@@ -1,0 +1,11 @@
+package qamavenpractice.MavenJava;
+
+import org.testng.annotations.Test;
+
+public class RegressionExampleOneTest {
+
+	@Test
+	public void test() {
+		System.out.println("This is regression test");
+	}
+}

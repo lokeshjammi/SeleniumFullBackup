@@ -1,0 +1,61 @@
+package qamavenpractice.MavenJava;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeGroups;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import junit.framework.AssertionFailedError;
+import junit.framework.TestListener;
+
+public class LoginDataProvider implements TestListener {
+	WebDriver driver = new ChromeDriver();
+	String URL = "https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+
+	@BeforeTest
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	}
+
+	@AfterTest
+	public void tearDown() {
+		driver.close();
+	}
+
+	@Test
+	@BeforeGroups("loginValidation")
+	public void test() {
+		driver.get(URL);
+		driver.manage().window().maximize();
+	}
+
+	@Test(dataProvider = "getData", groups = { "loginValidation" })
+	public void enterData(String userName, String password) {
+		WebElement userNameText = driver.findElement(By.xpath("//input[@type='email']"));
+		Actions a = new Actions(driver);
+		a.moveToElement(userNameText).sendKeys(userName).sendKeys(Keys.ENTER).build().perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement passwordText = driver.findElement(By.xpath("//input[@type='password']"));
+		Actions b = new Actions(driver);
+		b.moveToElement(passwordText).sendKeys(password).sendKeys(Keys.ENTER).build().perform();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+	@DataProvider
+	public Object[][] getData() {
+		Object[][] data = new Object[2][2];
+		data[0][0] = "jammilokesh3";
+		data[0][1] = "Lokesh@525531";
+
+		return data;
+	}
+}

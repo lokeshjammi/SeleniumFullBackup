@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]">
+  <test parallel="none" name="Test(failed)" preserve-order="true">
+    <classes>
+      <class name="com.demo.project.TestNgRealTime">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="pressSearchButton"/>
+        </methods>
+      </class> <!-- com.demo.project.TestNgRealTime -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

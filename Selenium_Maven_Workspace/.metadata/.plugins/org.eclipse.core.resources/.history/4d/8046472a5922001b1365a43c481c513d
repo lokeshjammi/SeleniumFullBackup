@@ -1,0 +1,7 @@
+package com.demo.datadrivenexcel;
+
+public class DataDrivenTestExcel {
+	public static void main(String[] args) {
+
+	}
+}

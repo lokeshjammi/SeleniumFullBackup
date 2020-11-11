@@ -1,0 +1,11 @@
+package com.testng.practice;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+
+public class BeforeSuiteExample {
+	@BeforeTest
+	public void setup() {
+		
+	}
+}

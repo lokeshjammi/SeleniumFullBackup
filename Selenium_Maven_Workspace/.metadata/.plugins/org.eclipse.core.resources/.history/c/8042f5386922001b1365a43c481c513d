@@ -1,0 +1,39 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Iterator;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class DataDrivenTestExcel {
+	public static void main(String[] args) throws IOException {
+		// Getting the file path
+		FileInputStream pathOfFile = new FileInputStream("D://DataCheck.xlsx");
+		// Getting the control over the document
+		XSSFWorkbook workbook = new XSSFWorkbook(pathOfFile);
+		// Get the number of sheets in file
+		int sheetCount = workbook.getNumberOfSheets();
+		System.out.println(sheetCount);
+
+		for (int i = 0; i < sheetCount; i++) {
+			if (workbook.getSheetName(i).equalsIgnoreCase("test data")) {
+				XSSFSheet sheet = workbook.getSheetAt(i);
+				//Finding the rows present in sheet
+				Iterator<Row> rows = sheet.iterator();
+				Row firstRow = rows.next();
+				//Iteration to cells present in sheet
+				Iterator<Cell> ce = firstRow.cellIterator();
+				while (ce.hasNext()) {
+					Cell value = ce.next();
+					if (value.getStringCellValue().equals("Test")) {
+						
+					}
+				}
+			}
+		}
+	}
+}

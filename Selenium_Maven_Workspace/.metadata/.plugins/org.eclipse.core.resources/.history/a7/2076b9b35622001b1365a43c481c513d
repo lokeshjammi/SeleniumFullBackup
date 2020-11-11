@@ -1,0 +1,11 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class DataDrivenTestDemo {
+	
+	FileInputStream path = new FileInputStream("D:\\DataCheck.xls");
+	XSSFWorkbook workbook = new XSSFWorkbook();
+}

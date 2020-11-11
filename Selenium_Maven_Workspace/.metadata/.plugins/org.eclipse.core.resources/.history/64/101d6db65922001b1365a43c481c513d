@@ -1,0 +1,15 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class DataDrivenTestExcel {
+	public static void main(String[] args) throws IOException {
+		FileInputStream pathOfFile = new FileInputStream("D://DataCheck.xls");
+		XSSFWorkbook workbook = new XSSFWorkbook(pathOfFile);
+		int sheetCount = workbook.getNumberOfSheets();
+		System.out.println(sheetCount);
+	}
+}

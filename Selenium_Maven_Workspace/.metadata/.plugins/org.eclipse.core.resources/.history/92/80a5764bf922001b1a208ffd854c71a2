@@ -1,0 +1,21 @@
+package com.demo.datadrivenexcel;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class DataDrivenTestExample {
+	public ArrayList<String> getData(String testCaseName) {
+
+		return null;
+	}
+
+	public static void main(String[] args) throws IOException {
+		FileInputStream filePath = new FileInputStream("D://DataDrivenCheck.xlsx");
+		XSSFWorkbook workBook = new XSSFWorkbook(filePath);
+		int countOfSheetInDocument = workBook.getNumberOfSheets();
+	}
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="33" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="33" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+      <class name="qamavenpractice.MavenJava.DemoExampleTwoTest">
+        <test-method status="PASS" signature="beforeEveryMethod()[pri:0, instance:qamavenpractice.MavenJava.DemoExampleTwoTest@6adede5]" name="beforeEveryMethod" is-config="true" duration-ms="5" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEveryMethod -->
+        <test-method status="PASS" signature="disableTest()[pri:0, instance:qamavenpractice.MavenJava.DemoExampleTwoTest@6adede5]" name="disableTest" duration-ms="2" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disableTest -->
+        <test-method status="PASS" signature="beforeEveryMethod()[pri:0, instance:qamavenpractice.MavenJava.DemoExampleTwoTest@6adede5]" name="beforeEveryMethod" is-config="true" duration-ms="0" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEveryMethod -->
+        <test-method status="PASS" signature="beforeEveryMethod()[pri:0, instance:qamavenpractice.MavenJava.DemoExampleTwoTest@6adede5]" name="beforeEveryMethod" is-config="true" duration-ms="0" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEveryMethod -->
+        <test-method status="PASS" signature="testFour()[pri:0, instance:qamavenpractice.MavenJava.DemoExampleTwoTest@6adede5]" name="testFour" duration-ms="0" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFour -->
+        <test-method status="PASS" signature="testThree()[pri:0, instance:qamavenpractice.MavenJava.DemoExampleTwoTest@6adede5]" name="testThree" duration-ms="0" started-at="2020-11-09T09:42:04 IST" finished-at="2020-11-09T09:42:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testThree -->
+      </class> <!-- qamavenpractice.MavenJava.DemoExampleTwoTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
